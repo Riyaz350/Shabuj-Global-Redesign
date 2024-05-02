@@ -1,12 +1,11 @@
 import { motion } from "framer-motion"
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { FaArrowDownLong } from "react-icons/fa6";
 import bgvideo from '../../assets/bgvideo.mp4'
  import './textwheel.css'
 import './home.css'
-import TextSpinner from "./TextSpinner";
-import ReactCurvedText from "react-curved-text";
+ import ReactCurvedText from "react-curved-text";
 const Banner = () => {
     
      
@@ -74,7 +73,7 @@ const Banner = () => {
             tspanProps={null}
             ellipseProps={null}
             svgProps={{"className": "rotating-curved-text-wheel"}} />
-            <div className="absolute w-[50px] h-[50px]   text-5xl rounded-full"><FaArrowDownLong /></div>
+            <motion.div initial={{y:-20}} animate={{y:20}} transition={{duration:1, repeat:Infinity}} className="absolute w-[50px] h-[50px]   text-5xl rounded-full"><FaArrowDownLong /></motion.div>
 
             </div>
 
