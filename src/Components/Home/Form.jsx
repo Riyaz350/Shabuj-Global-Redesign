@@ -3,23 +3,17 @@ import { FaChevronDown } from "react-icons/fa";
 import { MdDone } from "react-icons/md";
 import './textwheel.css'
 import './home.css'
-
-import { FaArrowDownLong } from "react-icons/fa6";
+import ReactCurvedText from 'react-curved-text';
+import './textwheel.css'
+import TextSpinner from "./TextSpinner";
 
 const Form = () => {
-    useEffect(() => {
-        const text = document.querySelector('.text p');
-        if (text) {
-        text.innerHTML = text.innerText.split("").map(
-            (char, i) => `<span style="transform:rotate(${i * 9}deg)">${char}</span>`
-        ).join("");
-        }
-    }, []);
+     
     const [tik, setTik] = useState(false)
     const inputStyle = 'p-2 rounded-md'
     const dropdownStyle = "dropdown dropdown-end max-w-xl w-full"
     return (
-        <div className="bg-[#E7E7E7] text-center space-y-5 py-10">
+        <div className="bg-[#E7E7E7] text-center space-y-5 py-10 relative">
             <h1 className="poppins text-4xl font-bold ">It’s Time to Start Your Journey With Us</h1>
             <p className="mulish">Book Your <span className="bg-[#88F3D0]">FREE</span> Consultation with Certified Counsellors </p>
 
@@ -70,11 +64,29 @@ const Form = () => {
                 <button className='mulish bg-[#004AC8] lg:my-10 text-white px-16 py-2   rounded-3xl mx-auto w-fit'>Book Free Counselling</button>
             </div>     
 
+            {/* <TextSpinner/> */}
+
             {/* <div className="lg:flex hidden justify-center items-center  relative w-1/2 mx-auto h-10 top-[10vh]">
                 <div className="relative bg-white w-[200px] h-[200px] rounded-full   flex justify-center items-center">
                     <p className="text poppins  w-full"> DREAM BIG STUDY ABROAD. </p>
                 </div>
             </div> */}
+            <div className={`absolute bottom-0  hidden lg:flex ${window.innerWidth  <= 1300 & window.innerWidth >= 768 ? 'right-[100px]':'right-1/4'}`}>
+            <ReactCurvedText width='220'
+            height='220'
+            cx='110'
+            cy='110'
+            rx='85'
+            ry='85'
+            startOffset={0}
+            reversed={true}
+            text='DREAM BIG STUDY ABROAD.'
+            textProps={{"style": {"fontSize": 18, "fontWeight": "bold"},   "textLength": "528px"}}
+            textPathProps={{"fill": "#1f1f1f"}}
+            tspanProps={null}
+            ellipseProps={null}
+            svgProps={{"className": "rotating-curved-text"}} />
+            </div>
 
 <div className="curved-text-container">
   <p className="curved-text">DREAM</p>
