@@ -2,6 +2,12 @@ import { LiaGreaterThanSolid } from "react-icons/lia";
  import { useState } from "react";
  import flight from '../../assets/Fligh Path (1).png'
  import plane from '../../assets/33 1.png'
+ import america from '../../assets/Flags/USA.jpg'
+ import UK from '../../assets/Flags/UK.jpeg'
+ import NZ from '../../assets/Flags/NZ.jpeg'
+ import GERMANY from '../../assets/Flags/GERMANY.jpeg'
+ import CANADA from '../../assets/Flags/CANADA.jpeg'
+ import AUSTRALIA from '../../assets/Flags/AUSTRALIA.jpeg'
  import './home.css'
 const Destination = () => {
     const [cardIndex, setCardIndex] = useState(null)
@@ -9,21 +15,32 @@ const Destination = () => {
     const countries = [
         {
             name:'UK',
+            img:UK
         },
         {
             name:'USA',
+            img:america
+
         },
         {
             name:'CANADA',
+            img:CANADA
+
         },
         {
             name:'Australia',
+            img:AUSTRALIA
+
         },
         {
             name:'Germany',
+            img:GERMANY
+
         },
         {
             name:'New Zealand',
+            img:NZ
+
         }
     ]
      
@@ -57,7 +74,7 @@ const Destination = () => {
                                     transformOrigin: "bottom right",
                                     transition: "transform 0.5s ease"
                                 }}
-                                className={` ${cardIndex ==index && 'rotate-bg'} w-full h-[250px] rounded-3xl bg-red-500 `}></div>
+                                > <img className={` ${cardIndex ==index && 'rotate-bg'} h-[250px] scale-x-[-1] w-full rounded-3xl bg-red-500 `} src={country.img} alt="" /> </div>
                                 <div
                                 style={{
                                     transform: cardIndex == index ? "rotate(10deg) translateY(40px) translateX(30px)" : "none",
