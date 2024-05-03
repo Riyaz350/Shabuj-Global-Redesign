@@ -81,7 +81,7 @@ const Destination = () => {
                                     transformOrigin: "bottom left",
                                     transition: "transform 0.5s ease"
                                 }}
-                                className="absolute top-0 left-0 flex flex-col justify-around items-center bg-[#081831] w-full   h-[250px]  rounded-3xl"  >
+                                className={`${cardIndex == index ? 'bg-[#08214b] z-20': 'bg-[#081831] z-10'} absolute top-0 left-0 flex flex-col justify-around items-center w-full   h-[250px]  rounded-3xl`}  >
                                     <h1 className="text-[#88F3D0] text-2xl text-center font-bold">{country.name}</h1>
                                     <button className="w-fit bg-[#2563EB] rounded-full text-white p-2"><LiaGreaterThanSolid /></button>
                                 </div>
