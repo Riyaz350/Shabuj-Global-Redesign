@@ -12,7 +12,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import "slick-carousel/slick/slick-theme.css";
 const Success = ( ) => {
  
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(window.innerWidth <1024? 1:0)
 
   let sliderRef = useRef(null);
 
@@ -51,45 +51,47 @@ const Success = ( ) => {
       slidesToShow: 3,
       slidesToScroll: 1,
       accessibility:false,
+      swipeToSlide:false,
+      swipe:false,
       
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            infinite: true,
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            infinite: true,
+      // responsive: [
+      //   {
+      //     breakpoint: 1024,
+      //     settings: {
+      //       slidesToShow: 3,
+      //       infinite: true,
+      //     }
+      //   },
+      //   {
+      //     breakpoint: 600,
+      //     settings: {
+      //       slidesToShow: 2,
+      //       infinite: true,
 
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            infinite: true,
+      //     }
+      //   },
+      //   {
+      //     breakpoint: 480,
+      //     settings: {
+      //       slidesToShow: 1,
+      //       infinite: true,
 
-          }
-        }
-      ]
+      //     }
+      //   }
+      // ]
   };
 
   // quote icons on cards
   const quotes = 
-  <div className="flex ml-[-20px] mb-[-10px]">              
-    <img className="w-[40px] h-[50px]" src={quote} alt="" />
-    <img className="w-[40px] h-[50px]" src={quote} alt="" />
+  <div className="flex lg:ml-[-20px] mb-[-10px]">              
+    <img className="w-[15px] h-[18px] lg:w-[40px] lg:h-[50px]" src={quote} alt="" />
+    <img className="w-[15px] h-[18px] lg:w-[40px] lg:h-[50px]" src={quote} alt="" />
   </div>
 
 // card styles
-  const slideStyle = 'flex flex-col gap-2 px-10 pt-5 pb-10 rounded-2xl mr-4 text-center space-y-3'
+  const slideStyle = 'flex flex-col  lg:gap-2 lg:px-10 pt-5 pb-10 rounded-2xl mr-4 text-center space-y-3'
 
   const successData = [
     {
@@ -135,58 +137,56 @@ const Success = ( ) => {
     <div className='mb-20  overflow-hidden '>
             {/* slider section */}
       <div className="slider-container sliderContainer pt-20 pb-10">
-      <div   className='grid lg:grid-cols-3 '>
-        <div className=" col-span-1 ml-auto">
-          <h1 className='text-7xl max-w-md font-bold bg-[#21E5E5] bg-clip-text lg:inline-block text-transparent '>Become a Part of Our Success Stories</h1>
+      <div   className='grid justify-center  lg:grid-cols-3 '>
+        <div className=" col-span-1 lg:ml-auto ">
+          <h1 className='text-4xl my-5 lg:my-0 lg:text-7xl max-w-md font-bold text-center lg:text-start bg-[#21E5E5] bg-clip-text lg:inline-block text-transparent '>Become a Part of Our Success Stories</h1>
         </div>
-        <div style={{width:200}} className="col-span-2 hidden lg:flex ">
+        <div style={{width:200}} className="col-span-2  flex justify-center lg:justify-start">
+          
         <Slider
           ref={slider => {
             sliderRef = slider;
           }}
           {...settings}
-          className='  max-w-7xl  text-black  '
-          centerPadding={100}
-        >
-          <div className='mr-5 ' key={1}>
-            
+          className='  relative left-1/2 pl-5 max-w-2xl md:max-w-5xl  lg:max-w-[1400px] text-black   '
+         >
+          <div className='lg:mr-5' key={1}>  
             <div className={`${slideStyle} ${index ==0 ? 'sliderCard' : 'bg-[#F5F6FF]'}`}>
               {quotes}
                <img className='rounded-2xl w-3/4 mx-auto' src={men1} alt="" />
-              <h1 className='text-2xl font-bold'>Shakib Hasan</h1>
-              <p className='text-start text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              <h1 className='text-lg lg:text-2xl font-bold'>Shakib Hasan</h1>
+              <p className='text-start text-xs  md:text-sm p-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
             </div>
-          </div>
-          <div className='mr-5 ' key={1}>
-            
-            <div className={`${slideStyle} ${index ==1 ? 'sliderCard' : 'bg-[#F5F6FF]'}`}>
+          </div> 
+          <div className='lg:mr-5' key={1}>  
+            <div className={`${slideStyle} ${index ==1? 'sliderCard' : 'bg-[#F5F6FF]'}`}>
               {quotes}
-                <img className='rounded-2xl w-3/4 mx-auto' src={men1} alt="" />
-                <h1 className='text-2xl font-bold'>Shakib Hasan</h1>
-                <p className='text-start text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+               <img className='rounded-2xl w-3/4 mx-auto' src={men1} alt="" />
+              <h1 className='text-lg lg:text-2xl font-bold'>Shakib Hasan</h1>
+              <p className='text-start text-xs  md:text-sm p-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
             </div>
-          </div>
-          <div className='mr-5 ' key={1}>
+          </div> 
+          <div className='lg:mr-5' key={1}>  
             <div className={`${slideStyle} ${index ==2 ? 'sliderCard' : 'bg-[#F5F6FF]'}`}>
               {quotes}
-                <img className='rounded-2xl w-3/4 mx-auto' src={men1} alt="" />
-                <h1 className='text-2xl font-bold'>Shakib Hasan</h1>
-                <p className='text-start text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+               <img className='rounded-2xl w-3/4 mx-auto' src={men1} alt="" />
+              <h1 className='text-lg lg:text-2xl font-bold'>Shakib Hasan</h1>
+              <p className='text-start text-xs  md:text-sm p-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
             </div>
-          </div>
-          <div className='mr-5 ' key={1}>
+          </div> 
+          <div className='lg:mr-5' key={1}>  
             <div className={`${slideStyle} ${index ==3 ? 'sliderCard' : 'bg-[#F5F6FF]'}`}>
-                {quotes}
-                <img className='rounded-2xl w-3/4 mx-auto' src={men1} alt="" />
-                <h1 className='text-2xl font-bold'>Shakib Hasan</h1>
-                <p className='text-start text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              {quotes}
+               <img className='rounded-2xl w-3/4 mx-auto' src={men1} alt="" />
+              <h1 className='text-lg lg:text-2xl font-bold'>Shakib Hasan</h1>
+              <p className='text-start text-xs  md:text-sm p-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
             </div>
-          </div>
+          </div> 
           
         </Slider>
         </div>
       </div>
-      <div className='my-10 text-white flex justify-start  relative left-[200px] gap-5' style={{ textAlign: "center" }}>
+      <div className='my-10 text-white flex lg:justify-start  relative justify-center lg:left-[200px] gap-5' style={{ textAlign: "center" }}>
         <button className={`${navBtn} button`} onClick={previous}>
         <BsArrowLeft/>
         </button>
