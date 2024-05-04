@@ -1,6 +1,6 @@
 import { useState } from "react";
 import img1 from '../../assets/0001 1.png'
-import img2 from '../../assets/Business Icons (7) 2.png'
+import img2 from '../../assets/For Partners Icon.png'
 import './home.css'
 const Guide = () => {
     const [index, setIndex] = useState(0)
@@ -30,7 +30,7 @@ const Guide = () => {
 
         {/* Large device */}
          <div className="hidden lg:flex flex-col bg-[#EFF6FF] lg:pb-32">
-            <div className="inter text-sm lg:text-[20px] font-semibold max-w-3xl mx-auto space-x-10 mt-32">
+            <div className="inter text-sm lg:text-[20px] font-semibold max-w-3xl mx-auto space-x-10 mt-32 mb-10">
                 <button className={`rounded-full py-[10px] px-28 ${index == 0  ? active :inActive}`} onClick={()=>setIndex(0)}>For Students</button>
                 <button className={`rounded-full py-[10px] px-28 ${index == 1  ? active :inActive}`} onClick={()=>setIndex(1)}>For Partners</button>
             </div>

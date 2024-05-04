@@ -30,3 +30,14 @@
         transform: rotate(10deg); /* Rotate to -20 degrees and hold */
     }
 }
+
+.sliderCard {
+    background: rgb(33,229,229);
+    background: linear-gradient(173deg, rgba(33,229,229,1) 30%, rgba(118,240,205,1) 67%);
+
+}
+
+.sliderContainer {
+    background: linear-gradient(173deg, rgba(3,30,229,1) 100%, rgba(51,137,253,1) 100%);
+
+}

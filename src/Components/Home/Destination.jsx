@@ -67,7 +67,7 @@ const Destination = () => {
                         {countries.map((country, index)=>(
                             <div
                             
-                            key={index} onMouseEnter={()=>setCardIndex(index)} onMouseLeave={()=>setCardIndex(null)} className=" bg-[#08183100] md:w-3/4 lg:w-2/4 md:mx-auto rounded-3xl h-[250px] relative">
+                            key={index} onMouseEnter={()=>setCardIndex(index)} onMouseLeave={()=>setCardIndex(null)} className={` bg-[#08183100] md:w-3/4 lg:w-2/4 md:mx-auto rounded-3xl h-[250px] relative`}>
                                 <div
                                 style={{
                                     transform: cardIndex == index ? "rotate(-10deg)" : "none",

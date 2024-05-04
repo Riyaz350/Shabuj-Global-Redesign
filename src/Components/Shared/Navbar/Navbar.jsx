@@ -19,7 +19,7 @@ const Navbar = () => {
 
                         {/* small device menu */}
 
-                    <div className="dropdown  dropdown-end flex lg:hidden">
+                    <div className="dropdown  dropdown-end lg:hidden">
                         <div tabIndex={0} role="button" className="btn z-50  bg-transparent shadow-none text-2xl   p-0"><RxHamburgerMenu /></div>
                         <ul tabIndex={0} className="dropdown-content z-[100] menu p-2 shadow bg-base-100 mt-10 rounded-box w-52">
                         {
@@ -69,7 +69,7 @@ const Navbar = () => {
                     <div   key={data.id} className='lg:hidden flex justify-center   z-40 '>
                         <div   className={`rounded-2xl z-50 bg-white lg:w-fit ${isIndex == data.id? 'absolute':'hidden'}`}>
                             <div className='     lg:mx-auto rounded-2xl shadow-xl p-5 lg:p-10 w-fit  '>
-                                <div className='flex justify-between items-start w-full'>
+                                <div className='flex justify-end items-start w-full'>
                                  <p onClick={() => setIndex(null)} className='flex lg:hidden text-2xl'><IoMdCloseCircleOutline /></p>
                                 </div>
                                 <div className='grid   w-fit  justify-between gap-5'>
