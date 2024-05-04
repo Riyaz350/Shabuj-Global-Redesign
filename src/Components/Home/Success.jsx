@@ -10,9 +10,8 @@ import { BsArrowLeft } from "react-icons/bs";
  import Slider from "react-slick";
  import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-const Success = (props) => {
-  const { className, style, onClick } = props;
-
+const Success = ( ) => {
+ 
   const [index, setIndex] = useState(0)
 
   let sliderRef = useRef(null);
@@ -30,9 +29,20 @@ const Success = (props) => {
     sliderRef.slickNext();
   };
   const previous = () => {
-    setIndex(index-1)
+    setTimeout(() => {
+      // Delayed execution after 500 milliseconds
+      if (index == 0) {
+        setIndex(3);
+      } else {
+        setIndex(index-1)
+        ;
+      }
+    }, 200);
     sliderRef.slickPrev();
   };
+
+  // nav button styles
+  const navBtn = 'text-3xl border-2 border-white rounded-full p-2'
 
   //React slick carousel settings
   const settings = {
@@ -122,9 +132,9 @@ const Success = (props) => {
     );
   }
   return (
-    <div className='mb-20  overflow-hidden'>
+    <div className='mb-20  overflow-hidden '>
             {/* slider section */}
-      <div className="slider-container sliderContainer pt-20">
+      <div className="slider-container sliderContainer pt-20 pb-10">
       <div   className='grid lg:grid-cols-3 '>
         <div className=" col-span-1 ml-auto">
           <h1 className='text-7xl max-w-md font-bold bg-[#21E5E5] bg-clip-text lg:inline-block text-transparent '>Become a Part of Our Success Stories</h1>
@@ -142,7 +152,7 @@ const Success = (props) => {
             
             <div className={`${slideStyle} ${index ==0 ? 'sliderCard' : 'bg-[#F5F6FF]'}`}>
               {quotes}
-               <img className='rounded-2xl' src={men1} alt="" />
+               <img className='rounded-2xl w-3/4 mx-auto' src={men1} alt="" />
               <h1 className='text-2xl font-bold'>Shakib Hasan</h1>
               <p className='text-start text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
             </div>
@@ -151,7 +161,7 @@ const Success = (props) => {
             
             <div className={`${slideStyle} ${index ==1 ? 'sliderCard' : 'bg-[#F5F6FF]'}`}>
               {quotes}
-                <img className='rounded-2xl' src={men1} alt="" />
+                <img className='rounded-2xl w-3/4 mx-auto' src={men1} alt="" />
                 <h1 className='text-2xl font-bold'>Shakib Hasan</h1>
                 <p className='text-start text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
             </div>
@@ -159,7 +169,7 @@ const Success = (props) => {
           <div className='mr-5 ' key={1}>
             <div className={`${slideStyle} ${index ==2 ? 'sliderCard' : 'bg-[#F5F6FF]'}`}>
               {quotes}
-                <img className='rounded-2xl' src={men1} alt="" />
+                <img className='rounded-2xl w-3/4 mx-auto' src={men1} alt="" />
                 <h1 className='text-2xl font-bold'>Shakib Hasan</h1>
                 <p className='text-start text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
             </div>
@@ -167,7 +177,7 @@ const Success = (props) => {
           <div className='mr-5 ' key={1}>
             <div className={`${slideStyle} ${index ==3 ? 'sliderCard' : 'bg-[#F5F6FF]'}`}>
                 {quotes}
-                <img className='rounded-2xl' src={men1} alt="" />
+                <img className='rounded-2xl w-3/4 mx-auto' src={men1} alt="" />
                 <h1 className='text-2xl font-bold'>Shakib Hasan</h1>
                 <p className='text-start text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
             </div>
@@ -176,12 +186,12 @@ const Success = (props) => {
         </Slider>
         </div>
       </div>
-      <div className='my-10 text-white flex justify-start  ' style={{ textAlign: "center" }}>
-        <button className="button" onClick={previous}>
+      <div className='my-10 text-white flex justify-start  relative left-[200px] gap-5' style={{ textAlign: "center" }}>
+        <button className={`${navBtn} button`} onClick={previous}>
         <BsArrowLeft/>
         </button>
 
-        <button className="button" onClick={next}>
+        <button className={`${navBtn} button`} onClick={next}>
         <BsArrowRight />
         </button>
       </div>
