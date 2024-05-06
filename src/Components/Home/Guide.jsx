@@ -30,7 +30,7 @@ const Guide = () => {
 
         {/* Large device */}
          <div className="hidden lg:flex flex-col bg-[#EFF6FF] lg:pb-32">
-            <div className="inter text-sm lg:text-[20px] font-semibold max-w-3xl mx-auto space-x-10 mt-32 mb-10">
+            <div className="inter bg-[#EEE] text-sm lg:text-[20px] font-semibold max-w-3xl mx-auto space-x-10 mt-32 mb-10">
                 <button className={`rounded-full py-[10px] px-28 ${index == 0  ? active :inActive}`} onClick={()=>setIndex(0)}>For Students</button>
                 <button className={`rounded-full py-[10px] px-28 ${index == 1  ? active :inActive}`} onClick={()=>setIndex(1)}>For Partners</button>
             </div>

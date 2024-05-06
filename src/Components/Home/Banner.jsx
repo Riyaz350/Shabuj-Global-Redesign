@@ -57,18 +57,18 @@ const Banner = () => {
             {/* <TextSpinner/> */}
  
 
-            <div className="  right-1/2   bg-[#EFF6FF] -mt-32  justify-center items-center mx-auto  hidden lg:flex">
+            <div className="  right-1/2   bg-[#EFF6FF] -mt-24  justify-center items-center mx-auto  hidden lg:flex">
             <ReactCurvedText 
-            width='240'
-            height='240'
-            cx='120'
-            cy='120'
-            rx='85'
-            ry='85'
+            width='180'
+            height='180'
+            cx='90'
+            cy='90'
+            rx='70'
+            ry='70'
             startOffset={0}
             reversed={true}
             text='DREAM BIG STUDY ABROAD.'
-            textProps={{"style": {"fontSize": 18, "fontWeight": "bold"},   "textLength": "528px"}}
+            textProps={{"style": {"fontSize": 18, "fontWeight": "bold"},   "textLength": "428px"}}
             textPathProps={{"fill": "#1f1f1f"}}
             tspanProps={null}
             ellipseProps={null}

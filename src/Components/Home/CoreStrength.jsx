@@ -104,7 +104,7 @@ const CoreStrength = () => {
         </div>
         
         
-        <div className='inter bg-[#4BA1FF] py-10 rounded-tl-badge rounded-br-badge lg:my-0 my-10'>
+        <div className='inter bg-[#4BA1FF] py-10 rounded-tl-badge rounded-br-badge lg:my-0 my-10 overflow-hidden'>
           <div className='bg-white -rotate-2 '>
           <Marquee pauseOnHover autoFill direction="right" speed={200}
               >     

@@ -11,13 +11,16 @@ import img26 from '../../assets/26.png'
 import img27 from '../../assets/27.png'
 import img28 from '../../assets/28.png'
 
+import animation from '../../assets/animation.gif'
+
 import './home.css'
 
 const Universities = () => {
     return (
-        <div className="poppins text-center my-10">
+        <div className="poppins text-center my-10 space-y-4">
             <h1 className="text-4xl text-[#004AC8] font-bold">Universities Across The Globe</h1>
             <h1 className="text-5xl font-bold">The Choice is Endless</h1>
+            <img className="lg:w-2/12 mx-auto" src={animation} alt="" />
             <Marquee pauseOnHover autoFill speed={200}
             >
                  <img className="px-2 lg:px-4 " src={img1} alt="" />

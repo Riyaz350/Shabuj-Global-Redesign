@@ -65,7 +65,7 @@ const Navbar = () => {
                     <button className='hidden lg:flex bg-[#93C5FD] py-2 px-5 rounded-lg text-white'>Login</button>
                 </div>
 
-                {navData.map(data =>
+                {/* {navData.map(data =>
                     <div   key={data.id} className='lg:hidden flex justify-center   z-40 '>
                         <div   className={`rounded-2xl z-50 bg-white lg:w-fit ${isIndex == data.id? 'absolute':'hidden'}`}>
                             <div className='     lg:mx-auto rounded-2xl shadow-xl p-5 lg:p-10 w-fit  '>
@@ -83,7 +83,7 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-                )}
+                )} */}
             </div>
             </div>
             
