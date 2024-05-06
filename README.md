@@ -3,7 +3,7 @@
 ## Live Link
 
 You can view the live version of Waves Marathon at the following link:
-[Live Demo](https://6638c933456725bbfaa1aa55--phenomenal-malasada-54157f.netlify.app/)
+[Live Demo](https://6638d8e0822f94d70f1cb374--phenomenal-malasada-54157f.netlify.app/)
 
 
 ## How to Run Locally
