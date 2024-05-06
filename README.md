@@ -8,7 +8,7 @@ You can view the live version of Waves Marathon at the following link:
 
 ## How to Run Locally
 
-To run Waves this webpage on your machine, follow these steps:
+To run this webpage on your machine, follow these steps:
 
 1. Clone the GitHub repository to a folder of your computer.
 2. From that folder open command prompt and install npm.
